@@ -35,7 +35,7 @@ class User(AbstractBaseUser):
     )
     first_name = models.CharField(max_length=15, verbose_name="First name", blank=True)
     last_name = models.CharField(max_length=15, verbose_name="Last name", blank=True)
-    avatar = models.ImageField(verbose_name="Аватар", null=True, blank=True)
+    avatar = models.ImageField(verbose_name="avatar", blank=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
@@ -52,6 +52,10 @@ class User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return True
+    
+    def get_short_name(self):
+        "Returns the short name for the user."
+        return self.first_name
 
     @property
     def is_staff(self):

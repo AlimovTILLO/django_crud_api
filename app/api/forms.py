@@ -31,15 +31,6 @@ class UserCreationForm(forms.ModelForm):
 
 
 class UserChangeForm(forms.ModelForm):
-    password = ReadOnlyPasswordHashField(
-        label=_("Password"),
-        help_text=_(
-            'Необработанные пароли не сохраняются, поэтому нет '
-            'возможности увидеть пароль этого пользователя, '
-            'но вы можете изменить пароль, используя '
-            '<button ><a href="{}"> эту форму</a></button>.'),
-    )
-
     class Meta:
         model = User
         fields = ('email', 'password', 'is_active', 'is_admin')

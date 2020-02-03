@@ -1,0 +1,8 @@
+django==1.11.27
+django-environ
+django-filter~=1.1
+pillow
+djangorestframework
+django-rest-knox
+django-cors-headers
+
