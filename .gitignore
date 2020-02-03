@@ -1,0 +1,7 @@
+/.vscode
+/venv
+app/media
+./app/media
+app/db.*
+/app/db.*
+__pycache__
