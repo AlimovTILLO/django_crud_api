@@ -1,4 +1,4 @@
-django==1.11.27
+django==1.11.29
 django-environ
 django-filter~=1.1
 pillow
